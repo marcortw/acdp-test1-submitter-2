@@ -1,0 +1,46 @@
+{
+  "application": {
+    "name": "acdp-test1-submitter-2",
+    "version": "Beta 1",
+    "description": "A simple application which produces services for consumption by other applications",
+    "applicationid": {
+      "value": "acdp-test1-submitter-2",
+      "random": false
+    },
+    "instanceid": {
+      "random": true,
+      "value": "instance id if not random"
+    }
+  },
+  "protocols": {
+    "unicast": {
+      "localConfigMode": {
+        "enabled": true,
+        "config": {
+          "dstProto": "http",
+          "dstHost": "10.10.80.50",
+          "dstPort": "42000",
+          "dstPath": "/"
+        }
+      },
+      "dnsDiscoveryMode": {
+        "enabled": false,
+        "autoSearchDomain": false,
+        "manualSearchDomain": "your.domain"
+      }
+    },
+    "multicast": {
+      "multicastSenderMode": {
+        "enabled": true
+      }
+    },
+    "global": {
+      "timing": {
+        "minDelayMs": 3000,
+        "randomizationFactor": 0.5
+      }
+    }
+  },
+  "encryption": {
+  }
+}
